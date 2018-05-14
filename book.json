@@ -25,7 +25,7 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/CloudNativeInfra/cloudnativeweekly"
+            "url": "https://github.com/CloudNativeInfra/cloudnativeweekly/blob/master"
         },
         "editlink": {
             "base": "https://github.com/CloudNativeInfra/cloudnativeweekly",
