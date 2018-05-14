@@ -1,4 +1,4 @@
-BOOK_NAME := awesome-servicemesh
+BOOK_NAME := cloud-native-weekly
 BOOK_OUTPUT := docs
 
 .PHONY: install build all
