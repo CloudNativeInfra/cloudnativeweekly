@@ -17,6 +17,7 @@ script:
   - "gitbook build . docs"
 
 after_script:
- - git add *
+ - cd docs
+ - git add -A
  - git commit -m "update"
- - git push -f "https://${GH_TOKEN}@${GH_REF}" master
+ - git push origin "https://${GH_TOKEN}@${GH_REF}" gh-pages
