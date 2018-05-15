@@ -3,8 +3,10 @@ language: node_js
 node_js:
   - "node"
 
-before_script:
+before_install:
   - "npm install gitbook-cli -g"
+
+install:
   - "gitbook install"
 
 cache:
@@ -13,3 +15,8 @@ cache:
 
 script:
   - "gitbook build . docs"
+
+after_script:
+ - git add *
+ - git commit -m "update"
+ - git push -f "https://${GH_TOKEN}@${GH_REF}"
