@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "node"
+
+before_install:
+  - "npm install gitbook-cli -g"
+
+install:
+  - "gitbook install"
+
+cache:
+  directories:
+    - "node_modules"
+
+script:
+  - "gitbook build . docs"
+
+after_script:
+ - cd docs
+ - git add -A
+ - git commit -m "update"
+ - git push origin "https://${GH_TOKEN}@${GH_REF}" gh-pages
